@@ -34,7 +34,7 @@ const register = async (req, res) => {
         }
 
         // Cifrar la contraseña 
-        let pwd = await bcrypt.hash(params.password, 20);
+        let pwd = await bcrypt.hash(params.password, 10);
         params.password = pwd;
 
         // Crear objeto de usuario
