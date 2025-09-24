@@ -35,13 +35,22 @@ export default function RegisterForm({ onRegister, onSwitch }) {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-green-100 to-green-300">
-      <div className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8">
-        <h1 className="text-4xl font-extrabold text-center text-green-600 mb-6">
-          Crear Cuenta ✨
+    <div
+      className="flex justify-center items-center min-h-screen bg-cover bg-center font-sans relative"
+      style={{
+        backgroundImage: "url('/loginimg.jpg')", // misma imagen que login
+      }}
+    >
+      {/* Overlay degradado */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+
+      {/* Formulario */}
+      <div className="relative w-full max-w-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl p-8 lg:p-10">
+        <h1 className="text-3xl font-bold text-center text-white mb-2">
+          Crear cuenta
         </h1>
-        <p className="text-center text-gray-500 mb-8">
-          Regístrate para unirte a la red social
+        <p className="text-center text-gray-300 mb-6">
+          Únete a nuestra red social 
         </p>
 
         {message && (
@@ -57,7 +66,7 @@ export default function RegisterForm({ onRegister, onSwitch }) {
             placeholder="Nombre"
             value={form.name}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
 
@@ -67,7 +76,7 @@ export default function RegisterForm({ onRegister, onSwitch }) {
             placeholder="Apellido"
             value={form.surname}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
 
@@ -77,7 +86,7 @@ export default function RegisterForm({ onRegister, onSwitch }) {
             placeholder="Nombre de usuario"
             value={form.nick}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
 
@@ -87,7 +96,7 @@ export default function RegisterForm({ onRegister, onSwitch }) {
             placeholder="Correo electrónico"
             value={form.email}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
 
@@ -97,24 +106,24 @@ export default function RegisterForm({ onRegister, onSwitch }) {
             placeholder="Contraseña"
             value={form.password}
             onChange={handleChange}
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
             required
           />
 
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+            className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition shadow-lg"
           >
             Registrarse
           </button>
         </form>
 
-        <p className="text-center text-sm text-gray-500 mt-6">
+        <p className="text-center text-sm text-gray-300 mt-6">
           ¿Ya tienes cuenta?{" "}
           <button
             type="button"
             onClick={onSwitch}
-            className="text-green-600 font-medium hover:underline"
+            className="text-purple-300 font-medium hover:underline"
           >
             Inicia sesión aquí
           </button>
