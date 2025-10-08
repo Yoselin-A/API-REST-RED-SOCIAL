@@ -36,4 +36,17 @@ const uploadPublicationImage = multer({ storage: storagePublications, fileFilter
 
 
 // ----------------- Exportar ambos -----------------
-module.exports = { uploadAvatar, uploadPublicationImage };
+// ----------------- Configuración para COVERS -----------------
+const storageCovers = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "./uploads/covers/");
+  },
+  filename: (req, file, cb) => {
+    cb(null, "cover-" + Date.now() + path.extname(file.originalname));
+  }
+});
+
+const uploadCover = multer({ storage: storageCovers, fileFilter });
+
+// ----------------- Exportar todos -----------------
+module.exports = { uploadAvatar, uploadPublicationImage, uploadCover };

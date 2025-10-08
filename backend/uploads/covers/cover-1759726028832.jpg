@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>miumg</title>
+
+<link rel="stylesheet" href="https://uvirtual.umg.edu.gt/pagos/assets/bootstrap.css"><link rel="stylesheet" href="https://uvirtual.umg.edu.gt/pagos/assets/custom.css">    
+    
+    <body class="bg-light">
+        <div id="app" class="container mt-3 mb-3">
+            
+
+
+
+
+
+<div class="_403doc alert alert-danger alert-dismissible fade show mt-3 d-none" role="alert">
+    <strong>No puede continuar con su solicitud, en virtud que tiene pendientes de entregar los siguientes documentos:</strong><br><br>
+    <ol class="mt-1 pl-3"></ol>
+    <p>
+        Cualquier duda o información de los documentos pendientes de entregar, favor comuníquese a la oficina de Registro y Control Académico a los siguientes correos:<br><br>
+        Pregrados: <a href="mailto:expedientes@umg.edu.gt">expedientes@umg.edu.gt</a><br>
+        Posgrados: <a href="mailto:maestrias@umg.edu.gt">maestrias@umg.edu.gt</a>
+    </p>
+</div>
+
+
+
+<div class="_404 alert alert-warning alert-dismissible fade show mt-3 d-none" role="alert">
+    <strong>CARNÉ NO EXISTE:</strong><br>
+    El número de carné <strong class="carne">  </strong> no existe.</div>
+
+
+
+
+
+
+
+
+
+<div class="logo">
+    <p class="text-center">
+        <img src="https://uvirtual.umg.edu.gt/pagos/assets/logo.png">
+    </p>
+</div><div class="card">
+    <div class="card-header text-center">
+        <h4>Pagos con Tarjeta de&nbsp;Crédito&nbsp;y&nbsp;Débito</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="https://uvirtual.umg.edu.gt/pagos/" class="needs-validation" novalidate  data-sitekey="6LcA6_cUAAAAAPfgCR3n4_HttFw-5-LWYgOm4YC_" >
+                            <script src="https://www.google.com/recaptcha/api.js?render=6LcA6_cUAAAAAPfgCR3n4_HttFw-5-LWYgOm4YC_"></script>
+                <input name="_recaptcha" value="1" type="hidden">
+                        
+            <input name="_step" value="1" type="hidden">
+
+            <div class="row carne-universitario">
+    <div class="col-sm-4">
+        <label for="carrera">No. de Carné</label>
+        <input name="carrera" id="carrera" type="tel" required pattern="[0-9]{3,4}" data-mask="0000" inpumode="numeric" class="form-control" value="">
+        <div class="invalid-feedback">
+            Código de la carrera        </div>
+    </div>
+    <div class="col-sm-3">
+        <label>&nbsp;</label>
+        <input name="carne[anno]" type="tel" required pattern="[0-9]{2}" data-mask="00" inputmode="numeric" class="form-control" value="">
+        <div class="invalid-feedback">
+            Año 2-digitos        </div>
+    </div>
+    <div class="col-sm-5">
+        <label>&nbsp;</label>
+        <input name="carne[correlativo]" type="tel" required pattern="[0-9]{1,5}" data-mask="00000" inputmod="numeric" class="form-control" value="">
+        <div class="invalid-feedback">
+            Correlativo de hasta 5 dígitos        </div>
+    </div>
+</div>            <div class="row mt-3">
+    <div class="col-sm-12">
+        <label for="pago">Tipo de Pago</label>
+        <select name="pago" id="pago" required class="custom-select">
+            <option value="">Seleccione...</option>
+                                                <option value="010" >010 - Inscripción ordinaria</option>
+                                                                <option value="011" >011 - Inscripción extraordinaria</option>
+                                                                <option value="111" >111 - Pronto Pago</option>
+                                                                <option value="143" >143 - Evaluación Profesional por Etapas Inglés</option>
+                                                                <option value="144" >144 - Recuperación Evaluación Profesional por Etapas Inglés</option>
+                                                                <option value="147" >147 - Taller Presencial doctorado en derecho penal y Ciencias criminalísticas</option>
+                                                                <option value="171" >171 - Cuota Anual de Inscripción</option>
+                                                                <option value="201" >201 - Colegiatura cursos</option>
+                                                                <option value="202" >202 - Cursos libres idiomas intensivos UMG Campus Central</option>
+                                                                <option value="203" >203 - Cursos idiomas regular UMG Campus Central</option>
+                                                                <option value="204" >204 - Cursos ingles externos</option>
+                                                                <option value="205" >205 - Complemento Inscripción Ingles</option>
+                                                                <option value="206" >206 - Cursos Ingles Inten. Ext.</option>
+                                                                <option value="207" >207 - Cuota Laboratorio Inglés 20 Hrs.</option>
+                                                                <option value="222" >222 - Inglés Enfermería/Fisioterapia (Bimestre)</option>
+                                                                <option value="228" >228 - Curso francés bimestre. UMG</option>
+                                                                <option value="229" >229 - Inscripción anual francés</option>
+                                                                <option value="230" >230 - Bufete Popular</option>
+                                                                <option value="232" >232 - Inscripción bimestral alemán</option>
+                                                                <option value="253" >253 - Validación cursos Arquitectura</option>
+                                                                <option value="260" >260 - Inglés docente facultad Ciencias Médicas y de la Salud</option>
+                                                                <option value="300" >300 - Evaluación Primer Parcial Extraordinario</option>
+                                                                <option value="302" >302 - Examen de Recuperación</option>
+                                                                <option value="305" >305 - Evaluación Segundo Parcial Extraordinario</option>
+                                                                <option value="308" >308 - Evaluación especial</option>
+                                                                <option value="309" >309 - Evaluación por suficiencia</option>
+                                                                <option value="321" >321 - Evaluación de Ubicación Idioma Inglés, Campus Central y Centros Universitarios</option>
+                                                                <option value="322" >322 - Evaluación Inglés Proficiencia</option>
+                                                                <option value="335" >335 - Revisión de Evaluación (por Curso)</option>
+                                                                <option value="354" >354 - Curso idiomas regular UMG Centros Universitarios</option>
+                                                                <option value="355" >355 - Curso idiomas Intensivo UMG Centros Universitarios</option>
+                                                                <option value="371" >371 - Reposición de Laboratorios</option>
+                                                                <option value="375" >375 - Equivalencias: Medicina, Nutrición, Fisioterapia, Veterinaria y Odontología</option>
+                                                                <option value="388" >388 - Gestión de Equivalencias</option>
+                                                                <option value="389" >389 - Equiparación General</option>
+                                                                <option value="392" >392 - Equiparaciones Maestrías por Curso (Homologación)</option>
+                                                                <option value="408" >408 - Firma de título</option>
+                                                                <option value="410" >410 - Reposición carné</option>
+                                                                <option value="411" >411 - Certificación de cursos</option>
+                                                                <option value="412" >412 - Cierre de Pensum</option>
+                                                                <option value="418" >418 - Certificación de Matrícula</option>
+                                                                <option value="421" >421 - Equivalencias de Posgrado</option>
+                                                                <option value="438" >438 - Programas</option>
+                                                                <option value="440" >440 - Equivalencias de Licenciatura</option>
+                                                                <option value="453" >453 - Parqueo</option>
+                                                                <option value="476" >476 - Abono multa</option>
+                                                                <option value="518" >518 - Auténticas</option>
+                                                                <option value="527" >527 - Equiparación Doctorados</option>
+                                                                <option value="577" >577 - Evaluación Práctica Profesional Supervisada Arquitectura</option>
+                                                                <option value="578" >578 - Escritos Académicos MAE Administración</option>
+                                                                <option value="600" >600 - Reasignación de cursos ordinaria</option>
+                                                                <option value="601" >601 - Reasignación de cursos extraordinaria</option>
+                                                                <option value="622" >622 - Envío de Títulos y Diplomas</option>
+                                                                <option value="625" >625 - Documentos devueltos a UMG</option>
+                                                                <option value="626" >626 - Certificación para pasantía</option>
+                                                                <option value="801" >801 - Abono multa por no devolver toga en graduación</option>
+                                                                <optgroup label="Evaluaciones de Ubicación">
+                                                    <option value="020" >020 - Examen Admón. Maestrías Odontología</option>
+                                                    <option value="340" >340 - Otras Carreras Campus Central</option>
+                                                    <option value="366" >366 - Odontología Campus Central y Centros Universitarios</option>
+                                                    <option value="367" >367 - Medicina, Campus Central</option>
+                                                    <option value="368" >368 - Fisioterapia y Veterinaria Campus Central</option>
+                                                    <option value="372" >372 - Curso Propedeútico de Medicina</option>
+                                                    <option value="373" >373 - Evaluación de Admisión para Medicina, Fisioterapia y Veterinaria, Centros Universitarios</option>
+                                                    <option value="477" >477 - Maestrías en Medicina</option>
+                                            </optgroup>
+                                                                <optgroup label="Curso libre Ciencia y Fe">
+                                                    <option value="101" >101 - Teología módulo 1: Ciencia</option>
+                                                    <option value="102" >102 - Teología módulo 2: Ética</option>
+                                                    <option value="103" >103 - Teología módulo 3: Fe</option>
+                                            </optgroup>
+                                                                <optgroup label="Evaluación General Privada">
+                                                    <option value="131" >131 - Evaluación Privada o Monografía MAE. Psicología UMG</option>
+                                                    <option value="143" >143 - Evaluación Profesional por Etapas Inglés</option>
+                                                    <option value="144" >144 - Recuperación Evaluación Profesional por Etapas Inglés</option>
+                                                    <option value="252" >252 - Evaluación General Privada Ciencias Médicas y de la Salud</option>
+                                                    <option value="254" >254 - Área Reprobada de Ciencias Médicas y de la Salud</option>
+                                                    <option value="257" >257 - Evaluación Profesional Licenciatura Tecnología Educativa</option>
+                                                    <option value="298" >298 - Evaluación General Privada 1 Área Derecho</option>
+                                                    <option value="299" >299 - Evaluación General Privada 2 Áreas Derecho</option>
+                                                    <option value="303" >303 - Evaluación General Privada Licenciaturas</option>
+                                                    <option value="306" >306 - Evaluación General Privada Carrera Intermedia Profesorados y Técnicos</option>
+                                                    <option value="310" >310 - Evaluación Técnico Profesional Ingeniería Sistemas (3 áreas)</option>
+                                                    <option value="311" >311 - Pago por área que haya Sido Reprobada</option>
+                                                    <option value="314" >314 - Evaluación General Privada Maestrías</option>
+                                                    <option value="338" >338 - Evaluación General Privada Oral Derecho Notarial y Mercantil</option>
+                                                    <option value="478" >478 - Pago por área  Licenciaturas</option>
+                                            </optgroup>
+                                                                <optgroup label="Seminarios">
+                                                    <option value="146" >146 - Seminario de graduación Licenciatura en Educación</option>
+                                                    <option value="151" >151 - Seminario Fundamentos de Ingeniería Química</option>
+                                                    <option value="152" >152 - Seminario de Gestión Industrial</option>
+                                                    <option value="153" >153 - Seminario de Operaciones Unitarias</option>
+                                                    <option value="172" >172 - Seminario Ingeniería Industrial Área Producción</option>
+                                                    <option value="173" >173 - Seminario Ingeniería Industrial Área Administrativa</option>
+                                                    <option value="174" >174 - Seminario Ingeniería Civil Área Estructuras</option>
+                                                    <option value="175" >175 - Seminario Ingeniería Civil Área Recursos Hidráulicos</option>
+                                                    <option value="176" >176 - Seminario Ingeniería Civil Área Administración de Proyectos</option>
+                                                    <option value="177" >177 - Seminario Ingeniería Civil Área Topografías</option>
+                                                    <option value="179" >179 - Seminario de Ingeniería Industrial Seguridad e Higiene Industria</option>
+                                                    <option value="182" >182 - Seminario Ingeniería Electrónica Automatización</option>
+                                                    <option value="183" >183 - Seminario Ingeniería Electrónica Desarrollo de Sistemas Electrónicos</option>
+                                                    <option value="184" >184 - Seminario Ingeniería Electrónica Sistemas de Comunicación</option>
+                                                    <option value="185" >185 - Seminario Ingeniería Mecánica Área Diseño Mecánico</option>
+                                                    <option value="186" >186 - Seminario Ingeniería Mecánica Área de Conversión de Energía</option>
+                                                    <option value="188" >188 - Seminario Área Derecho Privado</option>
+                                                    <option value="189" >189 - Seminario Área Derecho Público</option>
+                                                    <option value="190" >190 - Seminario Área Derecho Notarial</option>
+                                                    <option value="191" >191 - Recuperación de Seminario Carrera Derecho</option>
+                                                    <option value="195" >195 - Seminario T.U.C.C. Criminología y Criminalística</option>
+                                                    <option value="196" >196 - Seminario Ingeniería Mecánica Área Maquinas Hidráulicas y Neumáticas</option>
+                                                    <option value="197" >197 - Seminario Ingeniería Mecánica Área Procesos de Fabricación</option>
+                                                    <option value="198" >198 - Seminario Ingeniería en Sistemas Área Análisis, Diseño</option>
+                                                    <option value="199" >199 - Seminario Ingeniería en Sistemas Área Administración</option>
+                                                    <option value="200" >200 - Seminario Ingeniería en Sistemas Área Ciencias de la Ingeniería</option>
+                                                    <option value="236" >236 - Seminario de Pre-Privado Licenciaturas en General</option>
+                                                    <option value="255" >255 - Seminario de Enfermería Fase 1</option>
+                                                    <option value="261" >261 - Seminario de Investigación Postgrado Medicina</option>
+                                                    <option value="272" >272 - Seminario de Graduación Ciencias Criminológicas y Criminalísticas</option>
+                                                    <option value="378" >378 - Seminario Ingeniería Área Ciencias de la Ingeniería</option>
+                                                    <option value="379" >379 - Seminario Ingeniería Área Análisis Diseño de Sistemas</option>
+                                                    <option value="380" >380 - Seminario Ingeniería Área Administración de Sistemas</option>
+                                                    <option value="381" >381 - Seminario Licenciatura en Sistemas Área Administrativa Contable</option>
+                                                    <option value="382" >382 - Seminario Licenciatura en Sistemas Área de Análisis, Diseño y Desarrollo de Sistemas</option>
+                                                    <option value="383" >383 - Seminario Licenciatura en Sistemas Área de Administración de Sistemas</option>
+                                                    <option value="472" >472 - Seminario Lic. En Ciencias de la Computación Área de Análisis y Diseño</option>
+                                                    <option value="473" >473 - Seminario Lic. En Ciencias de la Computación Área de Admón. De Sistemas</option>
+                                                    <option value="474" >474 - Seminario Lic. En Ciencias de la Computación Área de Ciencias Admón.</option>
+                                                    <option value="435" >435 - Seminario Carreras Intermedias Técnicos/Profesorados</option>
+                                                    <option value="523" >523 - Seminario Evaluación Privada Criminología y Criminalística</option>
+                                                    <option value="525" >525 - Seminario Trabajo de Graduación Criminología y Criminalística</option>
+                                                    <option value="528" >528 - Seminario Tesis Maestría en Eduación Superior Fase 1</option>
+                                                    <option value="529" >529 - Seminario Tesis Maestría en Eduación Superior Fase 2</option>
+                                                    <option value="608" >608 - Seminario Graduación Maestrías Trabajo Social</option>
+                                            </optgroup>
+                                                                <optgroup label="Trabajo de Graduación">
+                                                    <option value="178" >178 - Trabajo de Graduación Ingeniería Civil, Industrial, Licenciaturas</option>
+                                                    <option value="213" >213 - Asesoría de Tesina T.U.C.C. Criminología y Criminalística</option>
+                                                    <option value="258" >258 - Seminario de Trabajo de Graduación Tecnología Educativa</option>
+                                                    <option value="256" >256 - Seminario del Trabajo de Graduación Enfermería (Fase 2)</option>
+                                                    <option value="262" >262 - Abono trabajo de graduación MAE Derecho</option>
+                                                    <option value="324" >324 - Privado del Trabajo de Graduación Licenciaturas (varias)</option>
+                                                    <option value="334" >334 - Asesoría y Revisión del Trabajo de Graduación Licenciaturas</option>
+                                                    <option value="347" >347 - Trabajo de Graduación Monografía Técnicos/Profesorados y Visita Médica</option>
+                                                    <option value="349" >349 - Privado del Trabajo de Graduación Ciencias Criminológicas</option>
+                                                    <option value="350" >350 - Asesoría Trabajo de Graduación Ciencias Criminológicas</option>
+                                                    <option value="573" >573 - Asesoría Megaproyecto Facultad de Ingeniería, Matemática y Ciencias Físicas</option>
+                                                    <option value="574" >574 - Revisión Megaproyecto Facultad de Ingeniería, Matemática y Ciencias Físicas</option>
+                                            </optgroup>
+                                                                <optgroup label="Trabajo de Graduación Maestrías y Doctorados">
+                                                    <option value="244" >244 - Evaluación de Trabajo de Graduación Doctorado en Derecho</option>
+                                                    <option value="245" >245 - Asesoría y Revisión del Trabajo de Graduación Doctorado en Criminología e Investigación</option>
+                                                    <option value="246" >246 - Evaluación de Trabajo de Graduación Doctorados</option>
+                                                    <option value="317" >317 - Asesoría Proyecto de Investigación</option>
+                                                    <option value="320" >320 - Acreditación de Especialidades Médicas</option>
+                                                    <option value="323" >323 - Crédito Académico Maestría Derecho Notarial por Curso</option>
+                                                    <option value="325" >325 - Privado del Trabajo de Graduación Maestrías Ingenería, Administración, Educación y Medicina</option>
+                                                    <option value="332" >332 - Asesoría y Revisión del Trabajo de Graduación Doctorado en Derecho</option>
+                                                    <option value="337" >337 - Asesoría de Trabajo de Graduación Derecho Notarial Mercantil y Procesal</option>
+                                                    <option value="343" >343 - Evaluación Trabajo de Graduación Maestrías Derecho Notarial</option>
+                                                    <option value="344" >344 - Evaluación Trabajo de Graduación Programa de Acreditación Especial</option>
+                                                    <option value="351" >351 - Asesoría y Revisión Trabajo de Graduación en Educación</option>
+                                                    <option value="352" >352 - Asesoría y Revisión del Trabajo de Graduación Maestrías en General</option>
+                                                    <option value="448" >448 - Asesoría de Trabajo de Graduación Doctorado</option>
+                                                    <option value="609" >609 - Trabajo de Graduación Facultad de Matematica y Ciencias Físicas</option>
+                                            </optgroup>
+                                                                <optgroup label="Acto de Graduación">
+                                                    <option value="132" >132 - Complemento. Grad. trámite a presencial: Intermedias</option>
+                                                    <option value="133" >133 - Complemento. Grad. trámite a presencial: Licenciaturas</option>
+                                                    <option value="134" >134 - Complemento. Grad. trámite a presencial: MAE en General</option>
+                                                    <option value="135" >135 - Complemento. Grad. trámite a presencial: MAE CCJJSS</option>
+                                                    <option value="149" >149 - Complemento. Grad. trámite a presencial: Doctorados</option>
+                                                    <option value="273" >273 - Complemento. Grad. virtual a presencial: Intermedias</option>
+                                                    <option value="274" >274 - Complemento. Grad. virtual a presencial: Licenciaturas</option>
+                                                    <option value="279" >279 - Complemento. Grad. virtual a presencial: MAE en General</option>
+                                                    <option value="280" >280 - Complemento. Grad. virtual a presencial: MAE CCJJSS</option>
+                                                    <option value="281" >281 - Complemento. Grad. virtual a presencial: Doctorados</option>
+                                                    <option value="328" >328 - Graduación presencial: carrera intermedia</option>
+                                                    <option value="329" >329 - Graduación presencial: licenciaturas</option>
+                                                    <option value="330" >330 - Graduación presencial: maestrías</option>
+                                                    <option value="331" >331 - Graduación presencial: doctorados</option>
+                                                    <option value="339" >339 - Graduación presencial: maestrías CCJJSS y Criminología</option>
+                                                    <option value="345" >345 - Acto de Graduación e Investidura Intermedia Criminología PNC</option>
+                                                    <option value="610" >610 - Trámite de título: carrera intermedia</option>
+                                                    <option value="611" >611 - Trámite de título: carrera licenciaturas</option>
+                                                    <option value="615" >615 - Graduación virtual: carrera intermedia</option>
+                                                    <option value="616" >616 - Graduación virtual: licenciaturas</option>
+                                            </optgroup>
+                                                                <optgroup label="Acto de Graduación Maestrías y Doctorados">
+                                                    <option value="134" >134 - Complemento. Grad. trámite a presencial: MAE en General</option>
+                                                    <option value="135" >135 - Complemento. Grad. trámite a presencial: MAE CCJJSS</option>
+                                                    <option value="149" >149 - Complemento. Grad. trámite a presencial: Doctorados</option>
+                                                    <option value="279" >279 - Complemento. Grad. virtual a presencial: MAE en General</option>
+                                                    <option value="280" >280 - Complemento. Grad. virtual a presencial: MAE CCJJSS</option>
+                                                    <option value="281" >281 - Complemento. Grad. virtual a presencial: Doctorados</option>
+                                                    <option value="330" >330 - Graduación presencial: maestrías</option>
+                                                    <option value="331" >331 - Graduación presencial: doctorados</option>
+                                                    <option value="339" >339 - Acto de Investidura Derecho Notarial</option>
+                                                    <option value="612" >612 - Trámite de título: maestrías CCJJSS y Criminología</option>
+                                                    <option value="613" >613 - Trámite de título: maestrías</option>
+                                                    <option value="614" >614 - Trámite de título: doctorados</option>
+                                                    <option value="617" >617 - Graduación virtual: maestrías CCJJSS y Criminología</option>
+                                                    <option value="618" >618 - Graduación virtual: maestrías</option>
+                                                    <option value="619" >619 - Graduación virtual: doctorados</option>
+                                            </optgroup>
+                                                                <optgroup label="Certificación de Privado y Acto de Graduación">
+                                                    <option value="130" >130 - Reimpresión de títulos y diplomas</option>
+                                                    <option value="393" >393 - Certificación de Privado</option>
+                                                    <option value="394" >394 - Certificación de Acto de Graduación</option>
+                                            </optgroup>
+                                                                <optgroup label="Centro de estudios aeronáuticos">
+                                                    <option value="022" >022 - Operaciones en Rampa</option>
+                                                    <option value="023" >023 - Mercancias peligrosas</option>
+                                                    <option value="024" >024 - Sistema de Gestión de la Seguridad Operacional SMS</option>
+                                                    <option value="025" >025 - Piloto de DRON -RPA-</option>
+                                                    <option value="026" >026 - Seguridad AVSEC de la carga y correo</option>
+                                                    <option value="027" >027 - Seguridad de la Aviación Civil AVSEC -inicial</option>
+                                                    <option value="028" >028 - Certificación de Aeródromos</option>
+                                                    <option value="030" >030 - Factores Humanos CRM Inicial</option>
+                                                    <option value="031" >031 - Factores Humanos CRM Recurrente</option>
+                                                    <option value="033" >033 - Factores Humanos CRH/SRM Inicial</option>
+                                                    <option value="034" >034 - Factores Humanos CRM/SMR Recurrente</option>
+                                                    <option value="035" >035 - Fisología de Vuelo y Primero Auxilios Inicial</option>
+                                                    <option value="036" >036 - Fisología de Vuelo y Primero Auxilios Recurrente</option>
+                                                    <option value="037" >037 - Auditor de Seguridad de La Aviación Civil Inicial</option>
+                                                    <option value="038" >038 - Auditor de Seguridad de la Aviación Civil Recurrente</option>
+                                                    <option value="039" >039 - Supervisor de Seguridad de la Aviación Civil Inicial</option>
+                                                    <option value="040" >040 - Supervisor de Seguridad de la Aviación Civil Recurrente</option>
+                                                    <option value="041" >041 - Evaluación de Proficiencia del Idioma Inglés Controladores Aéreos</option>
+                                                    <option value="042" >042 - Evaluación de Proficiencia del Idioma Inglés Personal Técnico Aeronúatica</option>
+                                                    <option value="043" >043 - Limpieza de Aeronaves</option>
+                                                    <option value="044" >044 - Train de Trainers Inicial</option>
+                                                    <option value="045" >045 - Train de Trainers Recurrente</option>
+                                            </optgroup>
+                                    </select>
+        
+        <div class="invalid-feedback">
+            Elija un tipo de pago para continuar        </div>
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-6">
+        <label for="certificacion-contrasenna">Contraseña de Certificación</label>
+        <input name="certificacion[contrasenna]" id="certificacion-contrasenna" type="text" class="form-control" value="">
+    </div>
+    <div class="col-sm-6">
+        <label for="certificacion-carrera">Carrera</label> <img data-content="Si desea una Certificación de Cursos Aprobados en otra Carrera para realizar equiparación de Cursos, favor seleccione el código de Carrera donde aprobó los mismos." src="https://uvirtual.umg.edu.gt/pagos/assets/info.svg" data-toggle="popover" data-placement="top" class="info">        <select name="certificacion[carrera]" id="certificacion-carrera" class="custom-select">
+            <option value="">Seleccione...</option>
+        </select>
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-12">
+        <label for="cierre-pensum-contrasenna">Contraseña de Cierre de Pensum</label>
+        <input name="cierrepensum[contrasenna]" id="cierre-pensum-contrasenna" type="text" class="form-control" value="">
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-12">
+        <label for="certificacion-matricula-contrasenna">Contraseña de Certificación de Matrícula</label>
+        <input name="certificacionmatricula[contrasenna]" id="certificacion-matricula-contrasenna" type="text" class="form-control" value="">
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-12">
+        <label for="cantidad">Cantidad de multas a pagar</label>
+        <input name="cantidad" id="cantidad" type="number" class="form-control" min="1" max="10" value="1">
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-12">
+        <label for="cantidad-411">Cantidad</label>
+        <input name="_cantidad[411]" id="cantidad-411" type="number" class="form-control" value="1" min="1" max="10" step="1">
+        <div class="invalid-feedback">
+            La Cantidad debe ser un número entero        </div>
+    </div>
+</div>
+<div class="row mt-3 d-none">
+    <div class="col-sm-12">
+        <label for="cantidad-412">Cantidad</label>
+        <input name="_cantidad[412]" id="cantidad-412" type="number" class="form-control" value="1" min="1" max="10" step="1">
+        <div class="invalid-feedback">
+            La Cantidad debe ser un número entero        </div>
+    </div>
+</div>
+<script>
+    var ubicaciones = [];
+            ubicaciones[0] = "020";
+            ubicaciones[1] = "340";
+            ubicaciones[2] = "366";
+            ubicaciones[3] = "367";
+            ubicaciones[4] = "368";
+            ubicaciones[5] = "372";
+            ubicaciones[6] = "373";
+            ubicaciones[7] = "477";
+    </script>            <div class="row mt-3 ciclo-academico">
+    <div class="col-sm-5">
+        <label for="ciclo-numero">Semestre/Trimestre</label>
+        <select name="ciclo[numero]" id="ciclo-numero" required class="custom-select">
+            <option value="">Seleccione...</option>
+                            <option value="1" >Primero</option>
+                            <option value="2" >Segundo</option>
+                            <option value="3" >Tercero</option>
+                            <option value="4" >Cuarto</option>
+                            <option value="5" >Quinto</option>
+                            <option value="6" >Sexto</option>
+                            <option value="7" >Séptimo</option>
+                            <option value="8" >Octavo</option>
+                    </select>
+        <div class="invalid-feedback">
+            Elija el semestre o trimestre        </div>
+    </div>
+    <div class="col-sm-7">
+        <label for="ciclo-anno">&nbsp;</label>
+        <select name="ciclo[anno]" id="ciclo-anno" required class="custom-select">
+            <option value="">Seleccione...</option>
+                            <option >2025</option>
+                            <option >2024</option>
+                            <option >2023</option>
+                            <option >2022</option>
+                            <option >2021</option>
+                            <option >2020</option>
+                            <option >2019</option>
+                            <option >2018</option>
+                            <option >2017</option>
+                            <option >2016</option>
+                            <option >2015</option>
+                    </select>
+        <div class="invalid-feedback">
+            Elija el año del Ciclo Académico        </div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-12">
+        <label for="mes">Mes</label>
+        <select name="mes" id="mes" required class="custom-select">
+            <option value="">Seleccione...</option>
+                            <option value="01" >Enero</option>
+                            <option value="02" >Febrero</option>
+                            <option value="03" >Marzo</option>
+                            <option value="04" >Abril</option>
+                            <option value="05" >Mayo</option>
+                            <option value="06" >Junio</option>
+                            <option value="07" >Julio</option>
+                            <option value="08" >Agosto</option>
+                            <option value="09" >Septiembre</option>
+                            <option value="10" >Octubre</option>
+                            <option value="11" >Noviembre</option>
+                            <option value="12" >Diciembre</option>
+                    </select>
+        <div class="invalid-feedback">
+            Elija el mes de pago de colegiatura o mes actual        </div>
+    </div>
+</div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Generar Boleta                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>        </div>
+
+        <script type="text/javascript" src="https://uvirtual.umg.edu.gt/pagos/assets/jquery.js"></script><script type="text/javascript" src="https://uvirtual.umg.edu.gt/pagos/assets/popper.js"></script><script type="text/javascript" src="https://uvirtual.umg.edu.gt/pagos/assets/bootstrap.js"></script><script type="text/javascript" src="https://uvirtual.umg.edu.gt/pagos/assets/jquery.mask.js"></script><script type="text/javascript" src="https://uvirtual.umg.edu.gt/pagos/assets/app.js?20211208"></script>    </body>
+</html>
