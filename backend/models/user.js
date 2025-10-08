@@ -31,6 +31,10 @@ const userSchema = new Schema({
     type: String,
     default: "default.png"
   },
+  cover: {
+    type: String,
+    default: "default-cover.png"
+  },
   created_at: {
     type: Date,
     default: Date.now

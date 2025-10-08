@@ -34,13 +34,17 @@ export default function LoginForm({ onLogin, onSwitch }) {
   };
 
   return (
-    <div className="min-h-screen flex">
-      {/* Lado izquierdo con imagen */}
+    <div className="min-h-screen flex overflow-hidden">
+      {/* Fondo con imagen y texto - 90% */}
       <div
-        className="hidden md:flex w-1/2 bg-cover bg-center relative"
+        className="w-[100%] bg-cover bg-center relative flex"
         style={{ backgroundImage: "url('/loginimg.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/50 flex flex-col justify-center px-12">
+        {/* Capa oscura */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Sección de texto e imagen */}
+        <div className="relative flex w-1/2 flex-col justify-center px-12 z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Bienvenido de nuevo
           </h1>
@@ -56,81 +60,82 @@ export default function LoginForm({ onLogin, onSwitch }) {
             +1.2M usuarios conectados
           </p>
         </div>
-      </div>
 
-      {/* Lado derecho con login */}
-      <div className="flex w-full md:w-1/2 justify-center items-center bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
-        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg w-full max-w-md">
-          <h2 className="text-2xl font-semibold mb-6 text-center text-white">
-            Iniciar sesión
-          </h2>
+        {/* Sección del formulario */}
+        <div className="relative flex w-1/2 items-center justify-center z-10">
+          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg w-full max-w-md">
+            <h2 className="text-2xl font-semibold mb-6 text-center text-white">
+              Iniciar sesión
+            </h2>
 
-          {message && (
-            <div
-              className={`p-3 rounded mb-4 text-center ${
-                message.startsWith("✅")
-                  ? "bg-green-100 text-green-700"
-                  : "bg-red-100 text-red-600"
-              }`}
-            >
-              {message}
-            </div>
-          )}
+            {message && (
+              <div
+                className={`p-3 rounded mb-4 text-center ${
+                  message.startsWith("✅")
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-600"
+                }`}
+              >
+                {message}
+              </div>
+            )}
 
-          {loading && (
-            <div className="text-center text-gray-300 mb-4">
-              ⏳ Validando credenciales...
-            </div>
-          )}
+            {loading && (
+              <div className="text-center text-gray-300 mb-4">
+                ⏳ Validando credenciales...
+              </div>
+            )}
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <input
-                type="email"
-                placeholder="Correo electrónico"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                placeholder="Contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                required
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Correo electrónico"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="password"
+                  placeholder="Contraseña"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                  required
+                />
+              </div>
 
-            <div className="flex items-center text-gray-300 text-sm">
-              <input type="checkbox" id="remember" className="mr-2" />
-              <label htmlFor="remember">Recordar contraseña</label>
-            </div>
+              <div className="flex items-center text-gray-300 text-sm">
+                <input type="checkbox" id="remember" className="mr-2" />
+                <label htmlFor="remember">Recordar contraseña</label>
+              </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition disabled:opacity-50"
-            >
-              {loading ? "Ingresando..." : "Iniciar sesión"}
-            </button>
-          </form>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-purple-500 to-blue-500 hover:opacity-90 transition disabled:opacity-50"
+              >
+                {loading ? "Ingresando..." : "Iniciar sesión"}
+              </button>
+            </form>
 
-          <p className="text-center text-sm text-gray-300 mt-6">
-            ¿No tienes cuenta?{" "}
-            <button
-              type="button"
-              onClick={onSwitch}
-              className="text-blue-300 font-medium hover:underline"
-            >
-              Regístrate aquí
-            </button>
-          </p>
+            <p className="text-center text-sm text-gray-300 mt-6">
+              ¿No tienes cuenta?{" "}
+              <button
+                type="button"
+                onClick={onSwitch}
+                className="text-blue-300 font-medium hover:underline"
+              >
+                Regístrate aquí
+              </button>
+            </p>
+          </div>
         </div>
       </div>
+      
     </div>
   );
 }

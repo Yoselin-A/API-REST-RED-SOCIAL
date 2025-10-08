@@ -3,6 +3,7 @@ const router = express.Router();
 const UserController = require("../controllers/user");
 const { auth } = require("../middlewares/auth");
 const { uploadAvatar } = require("../middlewares/upload");
+const { uploadCover } = require("../middlewares/upload");
 
 // Registro y login
 router.post("/register", UserController.register);
@@ -19,8 +20,12 @@ router.put("/update", auth, UserController.update);
 
 // Subida de avatar (protegido)
 router.post("/upload-avatar", auth, uploadAvatar.single("avatar"), UserController.uploadAvatar);
+// Subida de portada (protegido)
+router.post("/upload-cover", auth, uploadCover.single("cover"), UserController.uploadCover);
 
 // Mostrar avatar (público)
 router.get("/avatar/:file", UserController.getAvatar);
+// Mostrar portada (público)
+router.get("/cover/:file", UserController.getCover);
 
 module.exports = router;

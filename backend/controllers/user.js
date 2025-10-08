@@ -291,6 +291,56 @@ const getAvatar = (req, res) => {
   });
 };
 
+// Subir portada
+const uploadCover = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).send({
+        status: "error",
+        message: "No se ha subido ninguna imagen"
+      });
+    }
+
+    // Actualizar en BD
+    const updatedUser = await User.findByIdAndUpdate(
+      req.user.id,
+      { cover: req.file.filename },
+      { new: true }
+    ).select("-password");
+
+    return res.status(200).send({
+      status: "success",
+      message: "Portada actualizada correctamente",
+      file: req.file.filename,
+      user: updatedUser
+    });
+
+  } catch (error) {
+    return res.status(500).send({
+      status: "error",
+      message: "Error al subir portada",
+      error: error.message
+    });
+  }
+};
+
+// Devolver portada
+const getCover = (req, res) => {
+  const file = req.params.file;
+  const filePath = "./uploads/covers/" + file;
+
+  fs.stat(filePath, (err) => {
+    if (!err) {
+      return res.sendFile(path.resolve(filePath));
+    } else {
+      return res.status(404).send({
+        status: "error",
+        message: "La portada no existe"
+      });
+    }
+  });
+};
+
 module.exports = {
   register,
   login,
@@ -298,5 +348,7 @@ module.exports = {
   list,
   update,
   uploadAvatar,
-  getAvatar
+  uploadCover,
+  getAvatar,
+  getCover
 };
